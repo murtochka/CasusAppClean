@@ -1,0 +1,87 @@
+# Root .dockerignore - excludes unnecessary files from Docker build context
+# Reduces build context size and improves build performance
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Build outputs
+dist/
+build/
+.next/
+out/
+
+# Environment files (use .env.docker.example instead)
+.env
+.env.local
+.env.*.local
+*.env
+
+# Logs
+logs/
+*.log
+/tmp/
+*.tmp
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE
+.vscode/
+.idea/
+*.sublime-*
+.vs/
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# CI/CD
+.github/
+.gitlab-ci.yml
+.travis.yml
+
+# Documentation (include only essential docs)
+*.md
+!README.md
+!DOCKER_SETUP.md
+
+# Testing
+coverage/
+.nyc_output/
+*.test.js
+*.spec.js
+__tests__/
+test/
+tests/
+
+# Mobile app (not containerized)
+mobile/
+*.apk
+*.ipa
+*.aab
+
+# Database backups
+*.sql
+*.dump
+!db/init.sql
+
+# Docker files themselves
+Dockerfile*
+docker-compose*.yml
+.dockerignore
+
+# Miscellaneous
+*.bak
+*.backup
+*.cache
+.expo/
+.expo-shared/

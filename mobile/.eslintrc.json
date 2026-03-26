@@ -1,0 +1,86 @@
+{
+  "root": true,
+  "extends": [
+    "expo",
+    "prettier"
+  ],
+  "plugins": [
+    "import"
+  ],
+  "rules": {
+    "import/no-relative-packages": "warn",
+    "import/no-internal-modules": [
+      "warn",
+      {
+        "allow": [
+          "*/types",
+          "*/hooks",
+          "*/constants/*",
+          "*/utils/*"
+        ]
+      }
+    ],
+    "no-restricted-imports": [
+      "warn",
+      {
+        "patterns": [
+          {
+            "group": [
+              "../*"
+            ],
+            "message": "Relative imports are discouraged. Use '@/' path aliases instead."
+          },
+          {
+            "group": [
+              "**/src/*"
+            ],
+            "message": "Relative imports of src are discouraged. Use '@/' path aliases instead."
+          }
+        ]
+      }
+    ],
+    "sort-imports": [
+      "warn",
+      {
+        "ignoreCase": true,
+        "ignoreMemberSort": false,
+        "memberSortOrder": "asc",
+        "allowSeparatedGroups": true
+      }
+    ]
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx",
+          ".json"
+        ]
+      }
+    }
+  },
+  "overrides": [
+    {
+      "files": [
+        "*.ts",
+        "*.tsx"
+      ],
+      "parser": "@typescript-eslint/parser",
+      "parserOptions": {
+        "ecmaVersion": 2020,
+        "sourceType": "module",
+        "ecmaFeatures": {
+          "jsx": true
+        }
+      }
+    }
+  ],
+  "env": {
+    "browser": true,
+    "node": true,
+    "es2020": true
+  }
+}

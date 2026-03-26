@@ -1,0 +1,57 @@
+# EAS Build ignore patterns
+# Aggressively ignore large and non-essential files for EAS builds
+node_modules/
+node_modules*/
+node_modules_corrupt*/
+node_modules_to_delete*/
+../node_modules/
+../node_modules*/
+../node_modules_corrupt*/
+../node_modules_to_delete*/
+
+# Ignore backup and archive folders
+backup_cleanup_*/
+../backup_cleanup_*/
+
+# Ignore macOS metadata
+.DS_Store
+
+# Ignore local environment files
+.env
+.env.local
+
+# Ignore Expo cache
+.expo/
+.expo-shared/
+
+# Ignore logs and temp files
+nohup.out
+*.log
+logs/
+*.tmp
+*.swp
+*.swo
+
+# Ignore IDE/editor folders
+.vscode/
+.idea/
+
+# Ignore backup and generated files
+*.orig.*
+*.bak
+*.old
+
+# Ignore build outputs
+android/build/
+ios/build/
+
+# Ignore test data, videos, or large assets not needed for app
+# (Uncomment and edit as needed)
+# test-data/
+# videos/
+# backups/
+
+# Exclude large APKs and backend project
+application-*.apk
+../my-api-project/
+../node_modules_corrupt_*/

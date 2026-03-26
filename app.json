@@ -1,0 +1,12 @@
+{
+  "expo": {
+    "extra": {
+      "eas": {
+        "projectId": "da83a926-7ef1-4239-8a2b-d5c876929b11"
+      }
+    },
+    "android": {
+      "package": "com.murtochka.casusapp"
+    }
+  }
+}
